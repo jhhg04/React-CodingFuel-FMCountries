@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+:root {
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-bg: hsl(207, 26%, 17%);
+  --light-mode-elements: #fff;
+  --light-mode-elements: hsl(0, 0%, 98%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  background-color: var(--light-mode-bg);
   min-height: 100vh;
+  height: 100%;
+}
+
+.app_body {
+  margin: 15px auto 0;
+  padding: 15px;
+  max-width: 1400px;
+}
+
+.header {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header_container {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.switch_mode {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+.search_input input {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+}
+
+.select_region {
+  width: 300px;
+  background-color: white;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.select_region select {
+  padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.countries {
+  max-width: 1400px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.country {
+  background-color: white;
+  width: 305px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 370px;
+  cursor: pointer;
+}
+
+.country .flag_container {
+  height: 170px;
+  width: 100%;
+}
+
+.country .flag_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country .name {
+  margin-bottom: 10px;
+}
+
+.country .values {
+  color: gray;
+}
+
+.country .details {
+  padding: 15px;
+}
+
+.country .details p {
+  margin-bottom: 5px;
+}
+
+.country_details {
+  margin: 15px auto 0;
+  padding: 15px;
+  max-width: 1400px;
+  min-height: 100vh;
+}
+
+.back {
+  background-color: white;
 }
